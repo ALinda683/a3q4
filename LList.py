@@ -59,7 +59,7 @@ class LList(object):
         Return:
             :return True if the list has no data, or False otherwise
         """
-        return None
+        return self._head is None
 
     def size(self):
         """

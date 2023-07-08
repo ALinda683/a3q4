@@ -18,6 +18,16 @@
 
 import node as n
 
+class node(object):
+    """ A version of the Node class with public attributes.
+        This makes the use of node objects a bit more convenient for
+        implementing LList class.
+
+        Since there are no setters and getters, we use the attributes directly.
+
+        This is safe because the node class is defined in this module.
+    """
+
 
 class LList(object):
     def __init__(self):

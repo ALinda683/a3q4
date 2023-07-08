@@ -28,6 +28,16 @@ class node(object):
         This is safe because the node class is defined in this module.
     """
 
+    def __init__(self, data, next=None):
+        """
+        Create a new node for the given data.
+        Pre-conditions:
+            data:  Any data value to be stored in the node
+            next:  Another node (or None, by default)
+        """
+        self.data = data
+        self.next = next
+
 
 class LList(object):
     def __init__(self):
@@ -38,6 +48,9 @@ class LList(object):
         self._size = 0  # how many elements in the stack
         self._head = None  # the node chain starts here; initially empty
         self._tail = None
+        self._temp = None
+        self._counter = 0
+        self._prev = None
 
     def is_empty(self):
         """
